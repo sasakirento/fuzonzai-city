@@ -3,14 +3,379 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>不存在市</title>
+  <title>不存在市 公式観光案内</title>
+  <meta name="description" content="この街は存在しません。けれど、ようこそ。不存在市 公式観光案内" />
+  <meta property="og:title" content="不存在市 公式観光案内" />
+  <meta property="og:description" content="地図に載っていない街へ。" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main>
-    <h1>この街は存在しません。</h1>
-    <p>けれど、ようこそ。</p>
+  <div class="fog fog-1"></div>
+  <div class="fog fog-2"></div>
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">不</span>
+        <span class="logo-text">不存在市 公式観光案内</span>
+      </a>
+      <nav class="nav">
+        <a href="#about">街について</a>
+        <a href="#spots">観光スポット</a>
+        <a href="#access">アクセス</a>
+        <a href="#voices">住民の声</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button class="menu-button" id="menuButton" aria-label="メニューを開く">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about">街について</a>
+      <a href="#spots">観光スポット</a>
+      <a href="#access">アクセス</a>
+      <a href="#voices">住民の声</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">FUZONZAI CITY OFFICIAL GUIDE</p>
+          <h1>
+            この街は存在しません。<br>
+            <span>けれど、ようこそ。</span>
+          </h1>
+          <p class="lead">
+            海と山のあいだ、どこにも記録されていない場所。<br>
+            不存在市は、静かな気候と穏やかな時間に恵まれた、確認のむずかしい街です。
+          </p>
+
+          <div class="hero-actions">
+            <a href="#about" class="button primary">街を知る</a>
+            <a href="#spots" class="button ghost">観光案内を見る</a>
+          </div>
+
+          <p class="note">※現在、一部地域の輪郭が不安定になっています。</p>
+        </div>
+
+        <aside class="status-panel">
+          <div class="status-card">
+            <p class="label">本日の人口</p>
+            <p class="value" id="population">12,406名前後</p>
+          </div>
+          <div class="status-card">
+            <p class="label">現在の天候</p>
+            <p class="value" id="weather">薄曇り、ところにより記憶</p>
+          </div>
+          <div class="status-card">
+            <p class="label">到達状況</p>
+            <p class="value" id="arrival">あなたはまだ到着していません</p>
+          </div>
+          <div class="status-card">
+            <p class="label">市内放送</p>
+            <p class="small" id="broadcast">本日も市民の皆さまは落ち着いてご不在ください。</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section intro-strip">
+      <div class="container">
+        <p class="intro-copy">
+          だれも知らないのに、どこか懐かしい。
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">ABOUT</p>
+          <h2>不存在市について</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-main card">
+            <p>
+              不存在市は、古くから交通と記憶の交差点として親しまれてきた街です。
+              春は見覚えのある風が吹き、夏は遠い祭囃子が聞こえ、
+              秋には一部の通りが過去と接続し、冬には街全体が静かに薄れます。
+            </p>
+            <p>
+              中心部には市役所、商店街、時計塔、駅前広場など、
+              地方都市らしい落ち着いた風景が広がっています。
+              はじめて訪れる方でも、なぜか来たことがあるように感じられるはずです。
+            </p>
+            <p>
+              ただし、地図・路線図・住民台帳・気象記録などにおいて、
+              本市の表記が安定しない場合があります。
+              観光の際は、最新ではない案内をご参照ください。
+            </p>
+          </div>
+
+          <div class="about-side">
+            <div class="mini-card">
+              <h3>市の概要</h3>
+              <ul>
+                <li>面積：測定中</li>
+                <li>市の木：未分類</li>
+                <li>市の花：たぶん白い花</li>
+                <li>姉妹都市：確認されていません</li>
+              </ul>
+            </div>
+            <div class="mini-card">
+              <h3>観光課より</h3>
+              <p>
+                観光案内は可能です。<br>
+                ただし存在の証明は承っておりません。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="spots">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">SPOTS</p>
+          <h2>観光スポット</h2>
+          <p class="section-text">
+            不存在市には、季節や認識の状態によって見え方の変わる名所が点在しています。
+          </p>
+        </div>
+
+        <div class="spots-grid">
+          <article class="spot-card">
+            <span class="spot-number">01</span>
+            <h3>だれも降りたことのない駅前広場</h3>
+            <p>
+              駅を出てすぐの場所に広がる、開放感のある白い広場。
+              なお、これまでこの駅で降車した記録は確認されていません。
+            </p>
+          </article>
+
+          <article class="spot-card">
+            <span class="spot-number">02</span>
+            <h3>水位のない川</h3>
+            <p>
+              市内中央をゆるやかに流れる、穏やかな川。
+              水面が見えない日でも、川の音だけははっきりと聞こえます。
+            </p>
+          </article>
+
+          <article class="spot-card">
+            <span class="spot-number">03</span>
+            <h3>夕方だけ開く図書館</h3>
+            <p>
+              開館は毎日17:03から日没まで。
+              未執筆の本や、読んだ記憶だけが残る本も所蔵しています。
+            </p>
+          </article>
+
+          <article class="spot-card">
+            <span class="spot-number">04</span>
+            <h3>旧市街第零地区</h3>
+            <p>
+              石畳の路地、古い看板、閉じたままの喫茶店。
+              第零地区の入口は日によって変わります。
+            </p>
+          </article>
+
+          <article class="spot-card">
+            <span class="spot-number">05</span>
+            <h3>地図に載らない展望台</h3>
+            <p>
+              昼は街並み、夜は街灯の配列、
+              霧の深い朝には街の不在そのものを眺められます。
+            </p>
+          </article>
+
+          <article class="spot-card warning">
+            <span class="spot-number">NOTICE</span>
+            <h3>観光時のご注意</h3>
+            <p>
+              足元と現在地をご確認のうえお楽しみください。
+              帰路は往路と一致しない場合があります。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="access">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">ACCESS</p>
+          <h2>アクセス</h2>
+        </div>
+
+        <div class="access-grid">
+          <div class="card">
+            <h3>公共交通機関をご利用の方</h3>
+            <ul class="info-list">
+              <li>東京から：約2時間30分</li>
+              <li>大阪から：約1時間40分</li>
+              <li>最寄り駅：未確定</li>
+              <li>下車後：北口のような場所から徒歩約12分</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>お車をご利用の方</h3>
+            <p>
+              カーナビによっては目的地が表示されない場合があります。<br>
+              その際は、霧の濃い道をそのまま直進してください。<br>
+              案内音声が沈黙しても、そのままで問題ありません。
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>ご注意</h3>
+            <ul class="info-list">
+              <li>一部の地図アプリでは市名が表示されません</li>
+              <li>初めての方ほど迷わず到着する傾向があります</li>
+              <li>すでに到着済みである可能性があります</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="voices">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">VOICES</p>
+          <h2>住民の声</h2>
+        </div>
+
+        <div class="voices-grid">
+          <blockquote class="voice-card">
+            <p>「静かで暮らしやすい街ですよ。朝は少しだけ家の並びが変わりますけど、慣れれば気になりません。」</p>
+            <footer>佐藤さん / 在住年数不明</footer>
+          </blockquote>
+
+          <blockquote class="voice-card">
+            <p>「春になると駅がひとつ増えるんです。でも秋にはだいたい戻るので、生活には支障ないですね。」</p>
+            <footer>高橋さん / たぶん昔から在住</footer>
+          </blockquote>
+
+          <blockquote class="voice-card">
+            <p>「最初は観光で来たんです。帰ったつもりだったんですけど、今もここにいます。」</p>
+            <footer>田中さん / 市内在住</footer>
+          </blockquote>
+
+          <blockquote class="voice-card">
+            <p>「夜の川沿いは本当にきれいです。水は見えないんですけど、光だけ流れていくんですよ。」</p>
+            <footer>山本さん / 住所確認中</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section news-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">NEWS</p>
+          <h2>お知らせ</h2>
+        </div>
+
+        <div class="news-list">
+          <article class="news-item">
+            <time>2026.03.24</time>
+            <div>
+              <h3>駅前時計塔の時刻ずれについて</h3>
+              <p>現在、駅前時計塔の時刻が最大で18分ほど未来を示す現象を確認しております。</p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <time>2026.03.11</time>
+            <div>
+              <h3>第七码頭一帯の立入制限について</h3>
+              <p>潮位ではなく気配の上昇に伴い、第七码頭周辺への立入を一部制限しております。</p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <time>2026.02.30</time>
+            <div>
+              <h3>市民不在のお知らせ</h3>
+              <p>本日予定しておりました市民交流イベントは、市民の確認が困難であるため中止となりました。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">FAQ</p>
+          <h2>よくある質問</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>不存在市は実在しますか？</summary>
+            <p>現時点では断定を控えております。ただし、来訪者の多くが「たしかに訪れた」と証言しています。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>どこにありますか？</summary>
+            <p>地図により異なります。複数の地図をご確認いただくか、夕方の空をご参照ください。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>宿泊施設はありますか？</summary>
+            <p>ございます。目覚める前であれば、快適にご利用いただけます。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>移住は可能ですか？</summary>
+            <p>可能です。すでに移住済みである可能性もございます。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-card">
+        <p class="section-label">VISIT</p>
+        <h2>存在しない街を、歩いてみませんか。</h2>
+        <p>
+          不存在市では、みなさまのお越しを静かにお待ちしております。<br>
+          観光、散策、短期滞在、再訪、消失のいずれも歓迎しております。
+        </p>
+        <div class="hero-actions">
+          <a href="#access" class="button primary">アクセスを確認する</a>
+          <a href="#top" class="button ghost">トップへ戻る</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title">不存在市役所 観光課</p>
+        <p>〒000-0000 所在未確認</p>
+        <p>受付時間：9:00〜17:00（輪郭の安定時）</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">市の概要</a>
+        <a href="#faq">お問い合わせ</a>
+        <a href="#top">存在に関するご意見</a>
+      </div>
+    </div>
+    <p class="copyright">© FUZONZAI CITY / All rights not reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
